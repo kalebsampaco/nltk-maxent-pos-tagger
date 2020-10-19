@@ -112,7 +112,7 @@ class MaxentPosTagger(TaggerI):
                                                  trace, **cutoffs)
         t2 = time.time()
         if trace > 0:
-            print ("time to train the classifier: {0}".format(round(t2-t1, 3))
+            print "time to train the classifier: {0}".format(round(t2-t1, 3))
 
     def gen_feat_freqs(self, featuresets):
         """
