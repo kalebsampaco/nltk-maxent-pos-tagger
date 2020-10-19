@@ -417,14 +417,14 @@ def demo(corpus, num_sents):
     train_sents, test_sents = tagged_sents[size:], tagged_sents[:size]
     maxent_tagger = MaxentPosTagger()
     maxent_tagger.train(train_sents)
-    #print ("tagger accuracy (test %i sentences, after training %i):" % \
-        #(size, (num_sents - size)), maxent_tagger.evaluate(test_sents)
+    print ("tagger accuracy (test %i sentences, after training %i):" % \
+        (size, (num_sents - size)), maxent_tagger.evaluate(test_sents))
     print ("\n\n")
     print ("classify unseen sentence: ", maxent_tagger.tag(["This", "is", "so",
         "slow", "!"]))
     print ("\n\n")
-    print "show the 10 most informative features:"
-    print maxent_tagger.classifier.show_most_informative_features(10)
+    print ("show the 10 most informative features:")
+    print (maxent_tagger.classifier.show_most_informative_features(10))
 
 
 if __name__ == '__main__':
