@@ -419,10 +419,10 @@ def demo(corpus, num_sents):
     maxent_tagger.train(train_sents)
     #print ("tagger accuracy (test %i sentences, after training %i):" % \
         #(size, (num_sents - size)), maxent_tagger.evaluate(test_sents)
-    print "\n\n"
+    print ("\n\n")
     print ("classify unseen sentence: ", maxent_tagger.tag(["This", "is", "so",
         "slow", "!"]))
-    print "\n\n"
+    print ("\n\n")
     print "show the 10 most informative features:"
     print maxent_tagger.classifier.show_most_informative_features(10)
 
@@ -430,6 +430,6 @@ def demo(corpus, num_sents):
 if __name__ == '__main__':
     demo("treebank", 200)
     #~ featuresets = demo_debugger("treebank", 10000)
-    print "\n\n\n"
+    print ("\n\n\n")
 
 
