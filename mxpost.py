@@ -411,7 +411,7 @@ def demo(corpus, num_sents):
         from nltk.corpus import treebank
         tagged_sents = treebank.tagged_sents()[:num_sents]
     else:
-        print "Please load either the 'brown' or the 'treebank' corpus."
+        print ("Please load either the 'brown' or the 'treebank' corpus.")
 
     size = int(len(tagged_sents) * 0.1)
     train_sents, test_sents = tagged_sents[size:], tagged_sents[:size]
